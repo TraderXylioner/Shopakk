@@ -11,7 +11,7 @@ class UserModel(BaseModel):
     first_name: Mapped[str] = mapped_column(String(64))
     second_name: Mapped[str] = mapped_column(String(64))
     # balance: Mapped[float] = mapped_column(Float)
-    age: Mapped[int] = mapped_column(CheckConstraint('age > 0 AND age < 120', name='check_age'))
+    age: Mapped[int | None] = mapped_column(CheckConstraint('age > 0 AND age < 120', name='check_age'))
     role: Mapped[str] = mapped_column(default='customer')
     hashed_password: Mapped[str] = mapped_column()
     created_time: Mapped[int] = mapped_column(TIMESTAMP, server_default=func.now())

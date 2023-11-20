@@ -2,7 +2,6 @@ from sqlalchemy import String, TIMESTAMP, func, ForeignKey
 from sqlalchemy.orm import mapped_column, Mapped, relationship
 
 from .base import BaseModel
-from .wishlist_product import WishlistProductModel
 
 
 class WishlistModel(BaseModel):
@@ -15,4 +14,4 @@ class WishlistModel(BaseModel):
     update_time: Mapped[int] = mapped_column(TIMESTAMP, server_default=func.now(), onupdate=func.now())
 
     user = relationship('UserModel', back_populates='wishlists')
-    products = relationship('ProductModel', secondary=WishlistProductModel, back_populates='wishlists')
+    products = relationship('WishlistProductModel', back_populates='wishlist', cascade='all, delete-orphan')
