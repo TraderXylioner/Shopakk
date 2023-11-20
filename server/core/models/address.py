@@ -7,7 +7,7 @@ from .base import BaseModel
 class AddressModel(BaseModel):
     __tablename__ = 'address'
     address_id: Mapped[int] = mapped_column(autoincrement=True, primary_key=True)
-    user_id = mapped_column(ForeignKey('user.user_id'))
+    user_id = mapped_column(ForeignKey('user.id'))
     name: Mapped[str] = mapped_column(String(64))
     city: Mapped[str] = mapped_column(String(64))
     street: Mapped[str] = mapped_column(String(64))

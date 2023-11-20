@@ -7,7 +7,7 @@ from .base import BaseModel
 class WishlistModel(BaseModel):
     __tablename__ = 'wishlist'
     wishlist_id: Mapped[int] = mapped_column(autoincrement=True, primary_key=True)
-    user_id: Mapped[int] = mapped_column(ForeignKey('user.user_id'))
+    user_id: Mapped[int] = mapped_column(ForeignKey('user.id'))
     name: Mapped[str] = mapped_column(String(64))
     description: Mapped[str] = mapped_column(String(256))
     created_time: Mapped[int] = mapped_column(TIMESTAMP, server_default=func.now())

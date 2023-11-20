@@ -10,8 +10,5 @@ session = sessionmaker(engine, class_=AsyncSession)
 
 
 async def get_session():
-    try:
-        sessionObj: AsyncSession = session()
+    async with session() as sessionObj:
         yield sessionObj
-    finally:
-        await sessionObj.close()

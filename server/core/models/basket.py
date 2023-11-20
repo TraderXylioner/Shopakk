@@ -7,7 +7,7 @@ from .base import BaseModel
 class BasketModel(BaseModel):
     __tablename__ = 'basket'
     basket_id: Mapped[int] = mapped_column(autoincrement=True, primary_key=True)
-    user_id: Mapped[int] = mapped_column(ForeignKey('user.user_id'), unique=True)
+    user_id: Mapped[int] = mapped_column(ForeignKey('user.id'), unique=True)
     added_time: Mapped[int] = mapped_column(TIMESTAMP, server_default=func.now())
     update_time: Mapped[int] = mapped_column(TIMESTAMP, server_default=func.now(), onupdate=func.now())
 
