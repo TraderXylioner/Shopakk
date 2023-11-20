@@ -1,7 +1,7 @@
 import environs
 
 env = environs.Env()
-env.read_env('.env')
+env.read_env('server/.env')
 
 
 class Database:
