@@ -1,7 +1,7 @@
 from sqlalchemy import String, TIMESTAMP, func, CheckConstraint
 from sqlalchemy.orm import mapped_column, Mapped, relationship
 
-from base import BaseModel
+from .base import BaseModel
 
 
 class UserModel(BaseModel):

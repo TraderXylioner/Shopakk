@@ -1,9 +1,9 @@
 from sqlalchemy import String, TIMESTAMP, func, CheckConstraint
 from sqlalchemy.orm import mapped_column, Mapped, relationship
 
-from base import BaseModel
-from basket_prooduct import BasketProductModel
-from wishllist_product import WishlistProductModel
+from .base import BaseModel
+from .basket_prooduct import BasketProductModel
+from .wishlist_product import WishlistProductModel
 
 
 class ProductModel(BaseModel):

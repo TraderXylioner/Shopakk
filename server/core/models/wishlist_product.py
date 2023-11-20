@@ -1,7 +1,7 @@
 from sqlalchemy import ForeignKey
 from sqlalchemy.orm import mapped_column, Mapped
 
-from base import BaseModel
+from .base import BaseModel
 
 
 class WishlistProductModel(BaseModel):

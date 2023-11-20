@@ -1,8 +1,8 @@
 from sqlalchemy import TIMESTAMP, func, ForeignKey
 from sqlalchemy.orm import mapped_column, Mapped, relationship
 
-from base import BaseModel
-from basket_prooduct import BasketProductModel
+from .base import BaseModel
+from .basket_prooduct import BasketProductModel
 
 
 class BasketModel(BaseModel):

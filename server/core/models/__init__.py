@@ -1,1 +1,4 @@
-from . import address, base, basket, basket_prooduct, characteristic, image, product, user, wishlist, wishllist_product
+__all__ = ['base', 'address', 'basket', 'basket_prooduct', 'characteristic', 'image', 'product', 'user', 'wishlist',
+           'wishlist_product']
+
+from . import *
