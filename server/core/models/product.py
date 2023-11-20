@@ -16,5 +16,5 @@ class ProductModel(BaseModel):
 
     characteristics = relationship('CharacteristicModel', back_populates='product')
     images = relationship('ImageModel', back_populates='product')
-    baskets = relationship('BasketProductModel', back_populates='product', cascade='all, delete-orphan')
-    wishlists = relationship('WishlistProductModel', back_populates='product', cascade='all, delete-orphan')
+    baskets = relationship('BasketProductModel', back_populates='product')
+    wishlists = relationship('WishlistProductModel', back_populates='product')

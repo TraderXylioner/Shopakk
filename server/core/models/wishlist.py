@@ -14,4 +14,4 @@ class WishlistModel(BaseModel):
     update_time: Mapped[int] = mapped_column(TIMESTAMP, server_default=func.now(), onupdate=func.now())
 
     user = relationship('UserModel', back_populates='wishlists')
-    products = relationship('WishlistProductModel', back_populates='wishlist', cascade='all, delete-orphan')
+    products = relationship('WishlistProductModel', back_populates='wishlist')

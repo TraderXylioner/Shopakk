@@ -12,4 +12,4 @@ class BasketModel(BaseModel):
     update_time: Mapped[int] = mapped_column(TIMESTAMP, server_default=func.now(), onupdate=func.now())
 
     user = relationship('UserModel', back_populates='basket')
-    products = relationship('BasketProductModel', back_populates='basket', cascade='all, delete-orphan')
+    products = relationship('BasketProductModel', back_populates='basket')
