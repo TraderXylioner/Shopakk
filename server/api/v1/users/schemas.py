@@ -14,16 +14,3 @@ class UserResult(BaseModel):
     addresses: List[dict | None]
     basket: List[dict | None]
     wishlists: List[dict | None]
-
-
-class RegisterUserRequest(BaseModel):
-    email: str
-    first_name: str
-    second_name: str
-    age: int
-    password: str
-
-
-class LoginUserRequest(BaseModel):
-    email: str
-    password: str
